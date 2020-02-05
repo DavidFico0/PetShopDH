@@ -12,11 +12,13 @@ const banhoPet = require('./funcoes/banhoPets');
 const tosaPet = require('./funcoes/tosaPets');
 const servicosPets = require('./funcoes/servicosPets');
 const campVacina = require('./funcoes/campanhaVanciacao');
+const buscarPetNome = require('./funcoes/buscarPetNome');
 //const readline = require('readline');
 
 function menu(){
     const PETSHOP = "Pet Shop DH";
-    console.log("***** " + PETSHOP + " *****");
+    //console.log("***** " + PETSHOP + " *****");
+    console.log(`*** ${PETSHOP} ***`);
     //Abrindo entrada de dados para teclado;
     //const entrada = process.stdin;
     //const posPet = process.stdin;
@@ -34,7 +36,8 @@ function menu(){
     console.log("(5.Novo Pet)");
     console.log("(6.Serviços)");
     console.log("(7.Campanha de Vacinação)");
-    console.log("(8.Sair)");
+    console.log("(8.Buscar nome)");
+    console.log("(9.Sair)");
     process.stdout.write("> ");
 
     //Função que chama a entrada de valor para acionar função específica
@@ -51,7 +54,7 @@ function menu(){
             console.log("(5.Novo Pet)");
             console.log("(6.Serviços)");
             console.log("(7.Campanha de Vacinação)");
-            console.log("(8.Sair)");
+            console.log("(9.Sair)");
             process.stdout.write("> ");
 
         }
@@ -68,7 +71,7 @@ function menu(){
             console.log("(5.Novo Pet)");
             console.log("(6.Serviços)");
             console.log("(7.Campanha de Vacinação)");
-            console.log("(8.Sair)");
+            console.log("(9.Sair)");
             process.stdout.write("> ");
         }
         //Função - Confere se o pet é vacinado
@@ -83,7 +86,7 @@ function menu(){
             console.log("(5.Novo Pet)");
             console.log("(6.Serviços)");
             console.log("(7.Campanha de Vacinação)");
-            console.log("(8.Sair)");
+            console.log("(9.Sair)");
             process.stdout.write("> ");
 
         }
@@ -100,7 +103,7 @@ function menu(){
             console.log("(5.Novo Pet)");
             console.log("(6.Serviços)");
             console.log("(7.Campanha de Vacinação)");
-            console.log("(8.Sair)");
+            console.log("(9.Sair)");
             process.stdout.write("> ");
 
         }
@@ -117,7 +120,7 @@ function menu(){
             console.log("(5.Novo Pet)");
             console.log("(6.Serviços)");
             console.log("(7.Campanha de Vacinação)");
-            console.log("(8.Sair)");
+            console.log("(9.Sair)");
             process.stdout.write("> ");
 
         }
@@ -135,7 +138,7 @@ function menu(){
             console.log("(5.Novo Pet)");
             console.log("(6.Serviços)");
             console.log("(7.Campanha de Vacinação)");
-            console.log("(8.Sair)");
+            console.log("(9.Sair)");
             process.stdout.write("> ");
 
         }
@@ -152,12 +155,22 @@ function menu(){
             console.log("(5.Novo Pet)");
             console.log("(6.Serviços)");
             console.log("(7.Campanha de Vacinação)");
-            console.log("(8.Sair)");
+            console.log("(9.Sair)");
             process.stdout.write("> ");
 
         }
-        //Função - Sai do sistema.
+        //Função - Filtro nome
         else if(data == 8){
+            //buscarPetNome(petsArquivo);
+            let nome = "Batman";
+            let nomePet = petsArquivo.filter(function(nome){
+                return petsArquivo.nome;
+            });
+            console.log(nomePet);
+
+        }
+        //Função - Sai do sistema.
+        else if(data == 9){
             process.exit();
         }
     })

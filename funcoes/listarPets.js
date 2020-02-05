@@ -1,15 +1,15 @@
 const listPets = (pets) => {
     let i = 0;
-    while(i < pets.length){
-        console.log("Nome: " + pets[i].nome);
-        console.log("Tipo: " + pets[i].tipo);
-        console.log("Raça: " + pets[i].raca);
-        console.log(pets[i].genero == "F"? "Gener: Femea" : "Genero: Macho");
-        console.log("Idade: " + pets[i].idade);
-        console.log(pets[i].vacinado ? "Vacinado? Sim" : "Vaciando? Não" );
-        console.log("Serviços: " + pets[i].servicos);
+   
+    for(let pet in pets){
+        console.log("Nome: " + pets[pet].nome);
+        console.log("Tipo: " + pets[pet].tipo);
+        console.log("Raça: " + pets[pet].raca);
+        console.log(pets[pet].genero == "F"? "Gener: Femea" : "Genero: Macho");
+        console.log("Idade: " + pets[pet].idade);
+        console.log(pets[pet].vacinado ? "Vacinado? Sim" : "Vaciando? Não" );
+        console.log("Serviços: " + pets[pet].servicos);
         console.log("--------------------------------------------------------");
-        i++
     }
 } 
 
